@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
   <title id="title">In Becoming One Inc. logo</title>
-  <desc id="desc">Text logo with cross, gold accent, and teal waves.</desc>
-  <rect width="900" height="230" fill="none"/>
-  <g transform="translate(28 18)">
-    <path d="M95 10 v122" stroke="#0b2f66" stroke-width="13" stroke-linecap="round"/>
-    <path d="M48 55 h94" stroke="#0b2f66" stroke-width="13" stroke-linecap="round"/>
-    <path d="M12 164 C65 122, 126 121, 178 164" fill="none" stroke="#2e7f86" stroke-width="10" stroke-linecap="round"/>
-    <path d="M30 188 C74 158, 118 158, 162 188" fill="none" stroke="#2e7f86" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
-    <path d="M176 132 C196 105, 224 106, 240 132 C256 106, 286 106, 303 132 C303 170, 240 198, 240 198 C240 198, 176 170, 176 132Z" fill="#c9972c" opacity="0.95"/>
+  <desc id="desc">Clean horizontal logo with cross, heart, waves, and ministry tagline.</desc>
+  <rect width="920" height="220" fill="none"/>
+
+  <g transform="translate(35 24)">
+    <path d="M76 8v105" stroke="#0b2f66" stroke-width="10" stroke-linecap="round"/>
+    <path d="M38 45h76" stroke="#0b2f66" stroke-width="10" stroke-linecap="round"/>
+    <path d="M8 142c38-27 85-27 123 0" fill="none" stroke="#6f9aa0" stroke-width="9" stroke-linecap="round"/>
+    <path d="M20 166c30-20 69-20 99 0" fill="none" stroke="#6f9aa0" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
+    <path d="M122 116c16-21 39-21 52 0c13-21 37-21 51 0c0 34-51 56-51 56s-52-22-52-56z" fill="#c9972c"/>
   </g>
-  <text x="365" y="83" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="55" fill="#0b2f66" font-weight="700">In Becoming One, Inc.</text>
-  <path d="M190 104 H770" stroke="#c9972c" stroke-width="3" stroke-linecap="round"/>
-  <text x="480" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#2e7f86" font-weight="800" letter-spacing="2">STRONG MARRIAGES | THRIVING FAMILIES</text>
-  <text x="480" y="176" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#2e7f86" font-weight="800" letter-spacing="2">CONNECTED COMMUNITY</text>
+
+  <text x="495" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#0b2f66" font-weight="700">In Becoming One, Inc.</text>
+  <path d="M205 100h610" stroke="#c9972c" stroke-width="3" stroke-linecap="round"/>
+  <text x="495" y="132" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#2e7f86" font-weight="800" letter-spacing="2">STRONG MARRIAGES | THRIVING FAMILIES</text>
+  <text x="495" y="165" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#2e7f86" font-weight="800" letter-spacing="2">CONNECTED COMMUNITY</text>
 </svg>
