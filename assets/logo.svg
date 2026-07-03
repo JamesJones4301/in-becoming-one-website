@@ -1,18 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
-  <title id="title">In Becoming One Inc. logo</title>
-  <desc id="desc">Clean horizontal logo with cross, heart, waves, and ministry tagline.</desc>
-  <rect width="920" height="220" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">In Becoming One Inc. official logo style</title>
+  <desc id="desc">In Becoming One Inc. logo with navy and gold interlocking heart rings, cross, family figures, and tagline.</desc>
+  <rect width="1200" height="900" fill="#ffffff"/>
 
-  <g transform="translate(35 24)">
-    <path d="M76 8v105" stroke="#0b2f66" stroke-width="10" stroke-linecap="round"/>
-    <path d="M38 45h76" stroke="#0b2f66" stroke-width="10" stroke-linecap="round"/>
-    <path d="M8 142c38-27 85-27 123 0" fill="none" stroke="#6f9aa0" stroke-width="9" stroke-linecap="round"/>
-    <path d="M20 166c30-20 69-20 99 0" fill="none" stroke="#6f9aa0" stroke-width="7" stroke-linecap="round" opacity="0.85"/>
-    <path d="M122 116c16-21 39-21 52 0c13-21 37-21 51 0c0 34-51 56-51 56s-52-22-52-56z" fill="#c9972c"/>
+  <defs>
+    <linearGradient id="navyGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#062a55"/>
+      <stop offset="1" stop-color="#0d3b71"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e0b34d"/>
+      <stop offset="1" stop-color="#b77a18"/>
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7ab7ad"/>
+      <stop offset="1" stop-color="#2f7f86"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(0,-10)">
+    <path d="M445 207 C332 202 240 290 240 402 C240 545 378 622 499 690" fill="none" stroke="url(#navyGrad)" stroke-width="50" stroke-linecap="round"/>
+    <path d="M448 207 C548 210 594 307 592 412 C591 505 548 598 499 690" fill="none" stroke="url(#navyGrad)" stroke-width="19" stroke-linecap="round"/>
+    <path d="M705 207 C818 202 910 290 910 402 C910 545 772 622 651 690" fill="none" stroke="url(#goldGrad)" stroke-width="50" stroke-linecap="round"/>
+    <path d="M702 207 C602 210 556 307 558 412 C559 505 602 598 651 690" fill="none" stroke="url(#goldGrad)" stroke-width="19" stroke-linecap="round"/>
+
+    <path d="M575 293 V438" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M520 359 H630" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round"/>
+    <path d="M548 296 C558 330 558 408 548 440" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+    <path d="M602 296 C592 330 592 408 602 440" stroke="url(#goldGrad)" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+
+    <circle cx="575" cy="560" r="31" fill="url(#tealGrad)"/>
+    <circle cx="441" cy="610" r="28" fill="url(#navyGrad)"/>
+    <circle cx="709" cy="610" r="28" fill="url(#goldGrad)"/>
+
+    <path d="M574 679 C537 627 497 590 452 574 C493 636 529 688 575 740 C621 688 657 636 698 574 C653 590 613 627 574 679Z" fill="url(#tealGrad)"/>
+    <path d="M342 544 C400 590 462 663 575 740" fill="none" stroke="url(#tealGrad)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M808 544 C750 590 688 663 575 740" fill="none" stroke="url(#tealGrad)" stroke-width="28" stroke-linecap="round"/>
+    <path d="M407 562 C455 604 505 665 575 740" fill="none" stroke="#ffffff" stroke-width="17" stroke-linecap="round"/>
+    <path d="M743 562 C695 604 645 665 575 740" fill="none" stroke="#ffffff" stroke-width="17" stroke-linecap="round"/>
   </g>
 
-  <text x="495" y="74" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#0b2f66" font-weight="700">In Becoming One, Inc.</text>
-  <path d="M205 100h610" stroke="#c9972c" stroke-width="3" stroke-linecap="round"/>
-  <text x="495" y="132" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#2e7f86" font-weight="800" letter-spacing="2">STRONG MARRIAGES | THRIVING FAMILIES</text>
-  <text x="495" y="165" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#2e7f86" font-weight="800" letter-spacing="2">CONNECTED COMMUNITY</text>
+  <text x="600" y="805" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="95" fill="#092f63">
+    <tspan fill="#092f63">In </tspan><tspan fill="#c9972c">Becoming</tspan><tspan fill="#092f63"> One, Inc.</tspan>
+  </text>
+
+  <text x="600" y="865" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#6aa7a2" font-weight="800" letter-spacing="8">
+    STRONG MARRIAGES  |  THRIVING FAMILIES  |  CONNECTED COMMUNITY
+  </text>
 </svg>
