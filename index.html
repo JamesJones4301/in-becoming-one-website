@@ -15,49 +15,59 @@
       --cream: #fbfaf6;
       --white: #ffffff;
       --text: #17335a;
-      --muted: #647282;
       --line: #e4dfd5;
       --shadow: 0 18px 42px rgba(11, 47, 102, .10);
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: Georgia, "Times New Roman", serif; background: var(--cream); color: var(--text); line-height: 1.55; }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
     .container { width: min(1220px, calc(100% - 36px)); margin: 0 auto; }
+
     .topbar { background: var(--navy-dark); color: #eef5ff; font: 700 .85rem/1.35 Arial, sans-serif; padding: 9px 0; }
     .topbar .container { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-    .navbar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); box-shadow: 0 8px 20px rgba(11,47,102,.05); }
+
+    .navbar { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.98); border-bottom: 1px solid var(--line); box-shadow: 0 8px 20px rgba(11,47,102,.05); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 0; }
-    .brand img { width: 330px; max-width: 42vw; }
+    .brand { display: flex; align-items: center; flex: 0 0 auto; }
+    .brand img { width: 300px; max-width: 32vw; height: auto; }
     .nav-links { display: flex; gap: 15px; align-items: center; font: 800 .78rem/1 Arial, sans-serif; text-transform: uppercase; color: var(--navy); }
-    .nav-links a { padding: 10px 0; border-bottom: 2px solid transparent; }
+    .nav-links a { padding: 10px 0; border-bottom: 2px solid transparent; white-space: nowrap; }
     .nav-links a:hover { color: var(--gold); border-color: var(--gold); }
+
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 8px; padding: 13px 18px; background: var(--navy); color: white; font: 800 .88rem/1 Arial, sans-serif; text-transform: uppercase; cursor: pointer; box-shadow: 0 12px 25px rgba(11,47,102,.12); }
     .btn:hover { transform: translateY(-1px); }
     .btn.gold { background: var(--gold); }
     .btn.gold:hover { background: var(--gold-dark); }
     .btn.teal { background: var(--teal); }
     .btn.white { background: white; color: var(--navy); border: 1px solid var(--line); }
+
     .hero { position: relative; overflow: hidden; background: radial-gradient(circle at 92% 12%, rgba(201,151,44,.13), transparent 26%), radial-gradient(circle at 82% 70%, rgba(46,127,134,.18), transparent 30%), linear-gradient(180deg, white, #f5faf9); border-bottom: 1px solid var(--line); }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: center; padding: 46px 0 30px; }
-    .hero h1 { font-size: clamp(2.5rem, 5vw, 4.7rem); color: var(--navy); line-height: .98; letter-spacing: -.045em; margin-bottom: 16px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 44px; align-items: center; padding: 62px 0 48px; min-height: 640px; }
+    .hero h1 { font-size: clamp(3rem, 5vw, 4.6rem); color: var(--navy); line-height: 1.02; letter-spacing: -.045em; margin-bottom: 18px; }
     .hero h1 span { color: var(--gold); }
-    .hero p { max-width: 620px; font: 1.08rem/1.65 Arial, sans-serif; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 24px; }
-    .hero-logo-wrap { position: relative; min-height: 310px; display: grid; place-items: center; }
-    .hero-logo { width: min(470px, 94%); filter: drop-shadow(0 18px 24px rgba(11,47,102,.08)); }
-    .cross-bg { position: absolute; right: 7%; top: 8%; font-size: 13rem; color: rgba(11,47,102,.06); line-height: 1; }
+    .hero p { max-width: 640px; font: 1.1rem/1.7 Arial, sans-serif; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 26px; }
+    .hero-logo-wrap { position: relative; min-height: 340px; display: grid; place-items: center; padding: 22px; }
+    .hero-logo-card { width: min(510px, 100%); padding: 26px; border-radius: 22px; background: rgba(255,255,255,.62); box-shadow: var(--shadow); border: 1px solid rgba(228,223,213,.7); }
+    .hero-logo { width: 100%; height: auto; }
+    .cross-bg { position: absolute; right: 2%; top: 8%; font-size: 12rem; color: rgba(11,47,102,.055); line-height: 1; z-index: 0; }
+    .hero-logo-card { position: relative; z-index: 1; }
+
     .badge-strip { background: var(--navy); color: white; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); }
     .badge-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
     .badge { min-height: 82px; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 14px; border-right: 1px solid rgba(255,255,255,.18); text-align: center; }
     .badge:last-child { border-right: 0; }
     .badge strong { font: 800 .82rem/1.25 Arial, sans-serif; text-transform: uppercase; }
     .icon-circle { width: 46px; height: 46px; border: 2px solid rgba(255,255,255,.75); border-radius: 50%; display: grid; place-items: center; flex: 0 0 auto; }
+
     section { padding: 34px 0 0; }
     .section-head { text-align: center; margin-bottom: 16px; }
     h2 { color: var(--navy); font-size: clamp(2rem, 4vw, 3rem); text-transform: uppercase; letter-spacing: -.03em; line-height: 1.05; }
     .rule { width: min(280px, 100%); height: 2px; background: var(--gold); margin: 12px auto 0; opacity: .8; }
+
     .service-grid, .impact-row { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.62); }
     .service, .impact-card { text-align: center; padding: 24px 14px 18px; border-right: 1px solid var(--line); }
     .service:last-child, .impact-card:last-child { border-right: 0; }
@@ -65,17 +75,19 @@
     .service h3 { color: var(--navy); font-size: 1.02rem; line-height: 1.1; text-transform: uppercase; min-height: 46px; }
     .service p, .panel p, .panel li, .testimonial p { font: .95rem/1.55 Arial, sans-serif; color: var(--text); }
     .service p { max-width: 175px; margin: 9px auto 0; }
+
     .impact-card { padding: 18px 10px; }
-    .impact-card svg { width: 50px; height: 50px; margin-bottom: 8px; }
     .impact-card strong { display: block; color: var(--navy); font: 900 1.9rem/1 Arial, sans-serif; }
     .impact-card span { display: block; font: 800 .88rem/1.25 Arial, sans-serif; }
     .impact-card small { display: block; font: 700 .82rem/1.2 Arial, sans-serif; color: var(--navy); }
+
     .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr) 340px; gap: 14px; }
     .testimonial, .connect-card, .panel { border-radius: 12px; box-shadow: var(--shadow); }
     .testimonial, .panel { background: white; border: 1px solid var(--line); padding: 20px; }
     .testimonial p { font-style: italic; min-height: 104px; }
     .who { margin-top: 10px; font: 800 .9rem/1.3 Arial, sans-serif; color: var(--navy); }
     .stars { margin-top: 8px; color: var(--gold); letter-spacing: 2px; }
+
     .connect-card { background: linear-gradient(160deg, var(--navy), var(--navy-dark)); color: white; padding: 20px; }
     .connect-card h3, .panel h3 { text-transform: uppercase; margin-bottom: 10px; color: var(--navy); }
     .connect-card h3 { color: white; }
@@ -85,12 +97,14 @@
     .newsletter input { border: 0; }
     .socials { display: flex; gap: 10px; }
     .circle { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; display: grid; place-items: center; font: 800 .82rem/1 Arial, sans-serif; }
+
     .mission-band { margin-top: 22px; background: linear-gradient(90deg, #165a61, #103f63); color: white; }
     .mission-grid { display: grid; grid-template-columns: 1.55fr repeat(4, 1fr) 1.2fr; }
     .mission-item { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 82px; padding: 14px; border-right: 1px solid rgba(255,255,255,.14); text-align: center; }
     .mission-item:first-child { justify-content: flex-start; text-align: left; }
     .mission-item strong { display: block; font: 800 .83rem/1.25 Arial, sans-serif; text-transform: uppercase; }
     .mission-item span { display: block; font: .83rem/1.25 Arial, sans-serif; color: #eaf6f7; }
+
     .contact-section { padding: 28px 0; }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 22px; align-items: start; }
     .contact-list { list-style: none; margin-top: 12px; }
@@ -101,15 +115,40 @@
     label { display: block; margin-bottom: 6px; color: var(--navy); font: 800 .86rem/1 Arial, sans-serif; }
     textarea { min-height: 130px; resize: vertical; }
     .form-message { margin-top: 12px; font: 800 .92rem/1.4 Arial, sans-serif; }
+
+    .donation-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }
+    .donation-card { background: linear-gradient(160deg, var(--navy), var(--navy-dark)); color: white; border-radius: 14px; padding: 24px; box-shadow: var(--shadow); }
+    .donation-card h3 { color: white; text-transform: uppercase; margin-bottom: 10px; }
+    .donation-card p { color: #e8eef8; font: .96rem/1.6 Arial, sans-serif; }
+    .donation-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+
     .footer { background: var(--navy-dark); color: white; }
     .footer-grid { display: grid; grid-template-columns: 1.2fr .9fr .9fr .95fr .95fr; gap: 18px; padding: 24px 0 16px; }
-    .footer img { width: 230px; max-width: 100%; }
+    .footer img { width: 230px; max-width: 100%; background: white; border-radius: 8px; padding: 6px; }
     .footer h4 { font: 800 .92rem/1.2 Arial, sans-serif; text-transform: uppercase; margin-bottom: 8px; }
     .footer p, .footer a { color: #d8e3ef; font: .88rem/1.5 Arial, sans-serif; display: block; margin-bottom: 5px; }
     .copyright { border-top: 1px solid rgba(255,255,255,.13); text-align: center; color: #d8e3ef; font: .82rem/1.4 Arial, sans-serif; padding: 12px 0 16px; }
     svg { max-width: 100%; height: auto; }
-    @media (max-width: 1180px) { .nav-links { display: none; } .badge-grid, .service-grid, .impact-row { grid-template-columns: repeat(3, 1fr); } .testi-grid { grid-template-columns: 1fr 1fr; } .mission-grid { grid-template-columns: 1fr 1fr 1fr; } .footer-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    @media (max-width: 800px) { .hero-grid, .contact-grid, .footer-grid, .testi-grid, .mission-grid, .badge-grid, .service-grid, .impact-row { grid-template-columns: 1fr; } .brand img { width: 245px; max-width: 70vw; } .service, .impact-card, .badge, .mission-item { border-right: 0; border-bottom: 1px solid var(--line); } .form-row { grid-template-columns: 1fr; } .newsletter { flex-direction: column; } }
+
+    @media (max-width: 1180px) {
+      .nav-links { display: none; }
+      .brand img { width: 270px; max-width: 58vw; }
+      .badge-grid, .service-grid, .impact-row { grid-template-columns: repeat(3, 1fr); }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .mission-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid, .contact-grid, .footer-grid, .testi-grid, .mission-grid, .badge-grid, .service-grid, .impact-row, .donation-grid { grid-template-columns: 1fr; }
+      .hero-grid { min-height: auto; padding: 38px 0; }
+      .hero h1 { font-size: clamp(2.5rem, 14vw, 4rem); }
+      .brand img { width: 235px; max-width: 70vw; }
+      .hero-logo-wrap { min-height: auto; }
+      .service, .impact-card, .badge, .mission-item { border-right: 0; border-bottom: 1px solid var(--line); }
+      .form-row { grid-template-columns: 1fr; }
+      .newsletter { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
@@ -124,7 +163,7 @@
     <div class="container nav-inner">
       <a class="brand" href="#home"><img src="assets/logo.svg" alt="In Becoming One Inc. logo" /></a>
       <div class="nav-links">
-        <a href="#home">Home</a><a href="#story">Our Story</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#involved">Get Involved</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
+        <a href="#home">Home</a><a href="#story">Our Story</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#involved">Get Involved</a><a href="#resources">Resources</a><a href="#give">Give</a><a href="#contact">Contact</a>
       </div>
       <a class="btn" href="#contact">Contact & Book Us</a>
     </div>
@@ -137,14 +176,14 @@
           <h1>Strengthening Lives.<br><span>Building Families.</span><br>Transforming Communities.</h1>
           <p>In Becoming One Inc. is a faith-based 501(c)(3) nonprofit organization committed to strengthening marriages, supporting families, and transforming communities through faith, service, and love.</p>
           <div class="hero-actions">
-            <a class="btn gold" href="#give">Donate via Zeffy</a>
+            <a class="btn gold" href="https://www.zeffy.com/en-US/donation-form/in-becoming-one-donations" target="_blank" rel="noopener">Donate via Zeffy</a>
             <a class="btn" href="#contact">Book Us</a>
             <a class="btn teal" href="#connect">Join Our Community</a>
           </div>
         </div>
         <div class="hero-logo-wrap">
           <div class="cross-bg">✝</div>
-          <img class="hero-logo" src="assets/logo.svg" alt="In Becoming One Inc. large logo" />
+          <div class="hero-logo-card"><img class="hero-logo" src="assets/logo.svg" alt="In Becoming One Inc. large logo" /></div>
         </div>
       </div>
     </section>
@@ -163,12 +202,12 @@
       <div class="container">
         <div class="section-head"><h2>How We Serve</h2><div class="rule"></div></div>
         <div class="service-grid">
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30l16-14 16 14v20H16V30z"/><path d="M10 50h44"/><path d="M32 10v12"/><path d="M26 16h12"/><path d="M28 50V38h8v12"/></svg></div><h3>Faith-Based<br>Discipleship</h3><p>Helping individuals grow spiritually and live a purpose-driven life.</p></div>
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#c9972c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="30" r="14"/><circle cx="40" cy="30" r="14"/></svg></div><h3>Marriage<br>Enrichment</h3><p>Strengthening marriages through biblical principles, coaching, and resources.</p></div>
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30L32 16l18 14v20H14V30z"/><path d="M24 34c0-3 2.3-5 5-5 1.7 0 3 1 3 2 0-1 1.3-2 3-2 2.7 0 5 2 5 5 0 6-8 10-8 10s-8-4-8-10z" fill="#2e7f86"/></svg></div><h3>Family<br>Support</h3><p>Equipping families to build strong, healthy homes and lasting relationships.</p></div>
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="5"/><circle cx="40" cy="20" r="5"/><path d="M16 42l4-10 8 6 4-4 4 4 8-6 4 10"/><path d="M9 34l11 8"/><path d="M55 34L44 42"/></svg></div><h3>Community<br>Outreach</h3><p>Serving our communities through outreach events, partnerships, and mission.</p></div>
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18h18c5 0 8 3 8 8v24H20c-5 0-8-3-8-8V18z"/><path d="M52 18H34c-5 0-8 3-8 8v24h18c5 0 8-3 8-8V18z"/><path d="M32 26v24"/></svg></div><h3>Education &<br>Mentoring</h3><p>Providing education, mentoring, and life skills for personal growth.</p></div>
-          <div class="service"><div class="service-icon"> <svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="10" width="12" height="24" rx="6"/><path d="M20 28c0 7 5 12 12 12s12-5 12-12"/><path d="M32 40v12"/><path d="M24 52h16"/></svg></div><h3>Speaking &<br>Events</h3><p>Inspiring audiences at churches, conferences, retreats, and events.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30l16-14 16 14v20H16V30z"/><path d="M10 50h44"/><path d="M32 10v12"/><path d="M26 16h12"/><path d="M28 50V38h8v12"/></svg></div><h3>Faith-Based<br>Discipleship</h3><p>Helping individuals grow spiritually and live a purpose-driven life.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#c9972c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="30" r="14"/><circle cx="40" cy="30" r="14"/></svg></div><h3>Marriage<br>Enrichment</h3><p>Strengthening marriages through biblical principles, coaching, and resources.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 30L32 16l18 14v20H14V30z"/><path d="M24 34c0-3 2.3-5 5-5 1.7 0 3 1 3 2 0-1 1.3-2 3-2 2.7 0 5 2 5 5 0 6-8 10-8 10s-8-4-8-10z" fill="#2e7f86"/></svg></div><h3>Family<br>Support</h3><p>Equipping families to build strong, healthy homes and lasting relationships.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="20" r="5"/><circle cx="40" cy="20" r="5"/><path d="M16 42l4-10 8 6 4-4 4 4 8-6 4 10"/><path d="M9 34l11 8"/><path d="M55 34L44 42"/></svg></div><h3>Community<br>Outreach</h3><p>Serving our communities through outreach events, partnerships, and mission.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18h18c5 0 8 3 8 8v24H20c-5 0-8-3-8-8V18z"/><path d="M52 18H34c-5 0-8 3-8 8v24h18c5 0 8-3 8-8V18z"/><path d="M32 26v24"/></svg></div><h3>Education &<br>Mentoring</h3><p>Providing education, mentoring, and life skills for personal growth.</p></div>
+          <div class="service"><div class="service-icon"><svg viewBox="0 0 64 64" fill="none" stroke="#2e7f86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="26" y="10" width="12" height="24" rx="6"/><path d="M20 28c0 7 5 12 12 12s12-5 12-12"/><path d="M32 40v12"/><path d="M24 52h16"/></svg></div><h3>Speaking &<br>Events</h3><p>Inspiring audiences at churches, conferences, retreats, and events.</p></div>
         </div>
       </div>
     </section>
@@ -206,7 +245,7 @@
         <div class="mission-item"><div><strong>Volunteer</strong><span>Give your time</span></div></div>
         <div class="mission-item"><div><strong>Partner</strong><span>Support the mission</span></div></div>
         <div class="mission-item"><div><strong>Share</strong><span>Spread the word</span></div></div>
-        <div class="mission-item"><a class="btn gold" href="#give">Donate via Zeffy</a></div>
+        <div class="mission-item"><a class="btn gold" href="https://www.zeffy.com/en-US/donation-form/in-becoming-one-donations" target="_blank" rel="noopener">Donate via Zeffy</a></div>
       </div>
     </div>
 
@@ -242,9 +281,9 @@
     </section>
 
     <section class="contact-section" id="resources" style="padding-top:0;">
-      <div class="container contact-grid">
+      <div class="container donation-grid">
         <div class="panel"><h3>Resources</h3><p>Reserved for blog posts, devotionals, faith resources, annual reports, and ministry updates.</p><ul class="contact-list"><li>Annual Reports</li><li>Faith Resources</li><li>Devotionals</li><li>Prayer Requests</li></ul></div>
-        <div class="panel" id="give"><h3>Donate Securely via Zeffy</h3><p>Zeffy is our primary giving platform. Donate to one of the below platforms. Your generosity helps strengthen marriages, support families, and transform communities.</p><div class="hero-actions"><a class="btn gold" href="#">Donate Now</a><a class="btn white" href="#">Cash App Coming Soon</a><a class="btn white" href="#">Venmo Coming Soon</a></div><p style="margin-top:16px; font-size:.9rem;">Zeffy is 100% free for nonprofits. Your entire gift goes to the mission.</p></div>
+        <div class="donation-card" id="give"><h3>Donate Securely</h3><p>Zeffy is our primary giving platform. You may also give through Cash App or Venmo. Your generosity helps strengthen marriages, support families, and transform communities.</p><div class="donation-buttons"><a class="btn gold" href="https://www.zeffy.com/en-US/donation-form/in-becoming-one-donations" target="_blank" rel="noopener">Donate via Zeffy</a><a class="btn white" href="https://cash.app/$Inbecomingoneinc" target="_blank" rel="noopener">Cash App</a><a class="btn white" href="https://www.venmo.com/u/Inbecomingoneinc" target="_blank" rel="noopener">Venmo</a></div><p style="margin-top:16px; font-size:.9rem;">As an IRS-approved 501(c)(3), your donation may be tax-deductible as allowed by law.</p></div>
       </div>
     </section>
   </main>
@@ -255,7 +294,7 @@
       <div><h4>Quick Links</h4><a href="#story">Our Story</a><a href="#programs">Programs</a><a href="#impact">Impact</a><a href="#contact">Contact</a></div>
       <div><h4>Resources</h4><a href="#resources">Annual Reports</a><a href="#resources">Faith Resources</a><a href="#resources">Devotionals</a><a href="#resources">Blog</a></div>
       <div><h4>Get Involved</h4><a href="#involved">Volunteer</a><a href="#involved">Partner With Us</a><a href="#contact">Prayer Requests</a><a href="#contact">Contact & Book Us</a></div>
-      <div><h4>Donate Securely via Zeffy</h4><p>Your generosity makes an eternal impact.</p><a class="btn gold" href="#">Donate Now</a></div>
+      <div><h4>Donate</h4><p>Your generosity makes an eternal impact.</p><a href="https://www.zeffy.com/en-US/donation-form/in-becoming-one-donations" target="_blank" rel="noopener">Zeffy</a><a href="https://cash.app/$Inbecomingoneinc" target="_blank" rel="noopener">Cash App</a><a href="https://www.venmo.com/u/Inbecomingoneinc" target="_blank" rel="noopener">Venmo</a></div>
     </div>
     <div class="container copyright">© 2026 In Becoming One, Inc. All Rights Reserved. | 501(c)(3) Nonprofit Organization | Veteran-Owned Nonprofit</div>
   </footer>
