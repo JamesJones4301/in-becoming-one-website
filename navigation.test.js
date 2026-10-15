@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+test('mobile menu state, keyboard dismissal, links, and desktop resize',()=>{
+ const html=readFileSync('index.html','utf8');
+ const script=html.match(/<script>([\s\S]*?)<\/script>/)[1].split('    async function submitToBackend')[0];
+ const toggle={hidden:true,attrs:{'aria-expanded':'false'},listeners:{},setAttribute(k,v){this.attrs[k]=v;},getAttribute(k){return this.attrs[k];},addEventListener(k,v){this.listeners[k]=v;},focus(){this.focused=true;}};
+ const nav={hidden:false,listeners:{},addEventListener(k,v){this.listeners[k]=v;}};
+ const media={matches:true,addEventListener(k,v){this.change=v;}};
+ const doc={querySelector:s=>s==='.menu-toggle'?toggle:nav,addEventListener(k,v){this[k]=v;}};
+ vm.runInNewContext(script,{document:doc,window:{matchMedia:()=>media}});
+ assert.equal(toggle.hidden,false); assert.equal(nav.hidden,true);
+ toggle.listeners.click(); assert.equal(nav.hidden,false); assert.equal(toggle.attrs['aria-expanded'],'true');
+ doc.keydown({key:'Escape'}); assert.equal(nav.hidden,true);assert.equal(toggle.focused,true);
+ toggle.listeners.click();nav.listeners.click({target:{closest:()=>({})}});assert.equal(nav.hidden,true);
+ media.matches=false;media.change();assert.equal(nav.hidden,false);assert.equal(toggle.hidden,true);
+ media.matches=true;media.change();assert.equal(nav.hidden,true);assert.equal(toggle.hidden,false);
+ assert.doesNotMatch(html,/737-344-4075|17373444075|oVsXNLudWXXZ1jC1A/);
+ assert.equal((html.match(/https:\/\/calendar.app.google\/kqnzhLbd6CttPAjb6/g)||[]).length,3);
+ assert.match(html,/aria-controls="primary-navigation"/);
+});

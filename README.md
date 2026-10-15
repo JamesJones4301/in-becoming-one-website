@@ -108,3 +108,16 @@ Replace `href="#"` in `index.html` when each official link is ready.
 ## Notes
 
 Do not expose the Google Apps Script Web App URL directly in `index.html`. Keep it in Vercel as the environment variable `GOOGLE_APPS_SCRIPT_URL`.
+
+## Phase 1 maintenance
+
+- Public phone: 512-827-8222 (`tel:15128278222`).
+- Main Give navigation opens the existing Zeffy donation form directly.
+- All three booking links use `https://calendar.app.google/kqnzhLbd6CttPAjb6`, matching the previously configured footer. Anonymous verification reaches Google sign-in; the calendar owner must confirm the appointment destination and availability.
+- Below 1180px, Menu exposes the navigation links. The button reports its expanded state, Escape closes the menu and returns focus, and resizing resets the menu. Navigation remains available if JavaScript is disabled.
+- The submission proxy validates contact/newsletter input, times out upstream requests after 15 seconds, and only accepts a JSON response with `ok: true`. Backend errors, URLs, and raw responses are never returned to visitors.
+- Run `npm test` for dependency-free proxy and menu behavior tests.
+
+### Live integration verification
+
+Submit a clearly labeled test inquiry, then locate its unique test ID in the destination Google Sheet. HTTP success alone does not verify storage. Keep `GOOGLE_APPS_SCRIPT_URL` only in Vercel's server-side environment; never copy it into frontend code, logs, screenshots, or issue reports. The Apps Script deployment must execute as its owner and allow the server to call it. Repository changes do not update an independently deployed Apps Script web app.
